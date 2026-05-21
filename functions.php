@@ -31,4 +31,33 @@ add_action('after_setup_theme', 'my_theme_setup');
 
 
 
+function khan_services_post_type() {
+
+    register_post_type('service', array(
+
+        'labels' => array(
+            'name' => 'Services',
+            'singular_name' => 'Service'
+        ),
+
+        'public' => true,
+
+        'has_archive' => true,
+
+        'menu_icon' => 'dashicons-admin-tools',
+
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        ),
+
+        'show_in_rest' => true
+
+    ));
+}
+
+add_action('init', 'khan_services_post_type');
+
+
 
