@@ -23,6 +23,20 @@ wp_nav_menu(array(
     'menu_class' => 'nav-links'
 ));
 ?>
+
+
+  <!-- SEARCH FORM -->
+    <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+        <input
+            type="search"
+            placeholder="Search..."
+            name="s"
+            value="<?php echo esc_attr(get_search_query()); ?>"
+            class="nav-search-input"
+        >
+    </form>
+
+    
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
