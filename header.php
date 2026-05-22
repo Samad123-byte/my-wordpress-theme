@@ -36,7 +36,7 @@ wp_nav_menu(array(
         >
     </form>
 
-    
+
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
@@ -44,8 +44,11 @@ wp_nav_menu(array(
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="<?php echo home_url(); ?>">Home</a>
-<a href="<?php echo home_url('/about-us/'); ?>">About</a>
-<a href="<?php echo home_url('/our-services/'); ?>">Our Service</a>
-<a href="<?php echo home_url('/contact-us/'); ?>">Contact</a>
+<?php
+wp_nav_menu(array(
+    'theme_location' => 'primary_menu',
+    'container' => false,
+    'menu_class' => 'mobile-menu-links'
+));
+?>
 </div>

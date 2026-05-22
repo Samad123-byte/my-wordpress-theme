@@ -88,6 +88,37 @@ nav.scrolled{box-shadow:var(--shadow)}
 .mobile-menu a:hover{color:var(--accent)}
 .mobile-menu a:last-child{border:none}
 
+/* Remove default dots/bullets and margins from the WordPress generated list */
+.mobile-menu-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ensure the list item containers span fully and clean up spacings */
+.mobile-menu-links li {
+    display: block;
+    width: 100%;
+}
+
+/* Adjust your links so the bottom border matches the item, not individual link elements */
+.mobile-menu a {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: color .2s;
+}
+
+/* Remove the border from the very last menu link item container */
+.mobile-menu-links li:last-child a {
+    border-bottom: none !important;
+}
+
 /* ═══════════ PAGE SYSTEM ═══════════ */
 .page{display:none;padding-top:68px;animation:fadeIn .35s ease}
 .page.active{display:block}
@@ -1533,3 +1564,5 @@ footer{
 @media(max-width:768px) {
     .nav-search-input { display: none; }
 }
+
+
