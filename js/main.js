@@ -61,3 +61,7 @@ window.handleSubmit = function () {
         btn.classList.remove('success');
     }, 3000);
 };
+
+window.showPage = function(page) {
+    window.location.href = '/' + page;
+};

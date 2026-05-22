@@ -1,4 +1,7 @@
 <?php
+
+require_once get_template_directory() . '/inc/customizer-settings.php';
+
 function theme_enqueue_script() {
 
     wp_enqueue_style(
