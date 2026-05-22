@@ -1,8 +1,13 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="nav-logo" href="<?php echo home_url(); ?>" style="cursor:pointer">
-        <div class="logo-dot"></div>MyBrand
+
+            <a class="nav-logo" href="<?php echo esc_url(home_url('/')); ?>">
+
+                <div class="logo-dot"></div>
+
+                <?php bloginfo('name'); ?>
+
       </a>
         <p>A creative studio building beautiful digital experiences for brands that want to stand out.</p>
       </div>
